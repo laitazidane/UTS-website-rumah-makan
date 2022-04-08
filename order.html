@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Pesan Sekarang</title>
+
+</head>
+<body >
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <header>
+        
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> Teras Biru.</a>
+    
+        <nav class="navbar">
+            <a href="landingPage.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="biodata.html">Biodata</a>
+            <a class="active" href="order.html">Pesan</a>
+            <a href="profile.html">Profile</a>
+            
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <a href="biodata.html" class="fas fa-user" id="user-icon"></a>
+            <a href="index.html" class="fas fa-sign-out-alt"></a>
+        </div>
+    
+    </header>
+    
+    <!-- header section ends-->
+    
+    <!-- search form  -->
+    
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    
+    <!-- section pesan  -->
+    <section class="order" id="order">
+
+        <h1 class="sub-heading"> Pesan Sekarang </h1><br><br>
+    
+        <form name="form" method="post" action="tampilPesanan.html" >
+            <div class="inputBox">
+                <div class="input">
+                    <span>Nama</span>
+                    <input type="text" id="nama" placeholder="masukkan nama anda">
+                </div>
+                <div class="input">
+                    <span>Telepon</span>
+                    <input type="number" id="telp" placeholder="masukkan nomer">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Pesanan</span>
+                    <input type="text" id="pesanan" placeholder="masukkan nama makanan/minuman">
+                </div>
+                <div class="input">
+                    <span>Harga</span>
+                    <input type="number" id="harga" placeholder="masukkan harga makanan">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Jumlah Pesanan</span>
+                    <input type="number" id="jmlPesanan" placeholder="masukkan jumlah pesanan">
+                </div>
+                <div class="input">
+                    <span>Tanggal</span>
+                    <input id="tgl" type="datetime-local">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Alamat anda</span>
+                    <textarea name="" id="alamat" placeholder="masukkan alamat jika berada diluar tempat" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span>pesan</span>
+                    <textarea name="" placeholder="tulis pesan" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <a href="#detail-pesanan" type="button" class="btn" onclick="tampilPesan()" >pesan sekarang</a>
+        </form>
+    
+    </section>
+<section id="detail-pesanan" class="tabel-section" style="font-size: large; ">
+    <div id="mydata" style="color: black;">
+        <h2>Detail Pemesanan</h2>
+        <table class="tabel" id="myTableData"  border="1" cellpadding="2";">
+            <tr>
+                
+                <td><b>Nama Member</b></td>
+                <td><b>Pesanan</b></td>
+                <td><b>Harga</b></td>
+                <td><b>Jumlah Pesanan</b></td>
+                <td><b>Total Pembayaran</b></td>
+                <td><b>Tanggal</b></td>
+                <td><b>No Telp</b></td>
+                <td><b>Alamat</b></td>
+                <td><b>Pesan</b></td>
+                <td><b>Action</b></td>
+                
+            </tr>
+        </table>
+         
+        </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>lokasi</h3>
+            <a href="#">Probolinggo</a>
+            <a href="#">Jakarta</a>
+            <a href="#">Malang</a>
+            <a href="#">Surabaya</a>
+
+            
+        </div>
+
+        <div class="box">
+            <h3>Tautan</h3>
+            <a href="landingPage.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="order.html">Pesan</a>
+            <a href="#about">Profile</a>
+        </div>
+
+        <div class="box">
+            <h3>Kontak Kami</h3>
+            <a href="">Jalan P. Sudirman, Wringinan, Tambakrejo, Kec. Tongas, Kabupaten Probolinggo, Jawa Timur 67252</a>
+            <a href="#" class="fa fa-whatsapp"> +62859328923</a>
+            <a href="#" >rawonnguling@gmail.com</a>
+        </div>
+
+        <div class="box">
+            <h3>follow Kami</h3>
+            <a href="#" class="fa fa-facebook"> Rawon Nguling Prob</a>
+            <a href="#" class="fa fa-instagram"> @rawonnguling_prob</a>
+        </div>
+
+    </div>
+
+    <div class="credit"> copyright @ 2022 by <span>rawon nguling probolinggo</span> </div>
+
+</section>
+
+</body>
+
+
+
+</html>
