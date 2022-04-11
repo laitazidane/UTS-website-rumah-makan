@@ -19,7 +19,7 @@
 
     <header>
         
-        <a href="#" class="logo"><i class="fas fa-utensils"></i> Teras Biru.</a>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> Rawon Nguling.</a>
     
         <nav class="navbar">
             <a href="landingPage.html">Home</a>
@@ -53,10 +53,10 @@
 
         <h1 class="sub-heading"> Pesan Sekarang </h1><br><br>
     
-        <form name="form" method="post" action="tampilPesanan.html" >
+        <form name="form" method="post" action="" id="idform" onsubmit="tampilPesan()" >
             <div class="inputBox">
                 <div class="input">
-                    <span>Nama</span>
+                    <span>Nama(member bernama = zidan dan dito)</span>
                     <input type="text" id="nama" placeholder="masukkan nama anda">
                 </div>
                 <div class="input">
@@ -68,6 +68,7 @@
                 <div class="input">
                     <span>Pesanan</span>
                     <input type="text" id="pesanan" placeholder="masukkan nama makanan/minuman">
+                    
                 </div>
                 <div class="input">
                     <span>Harga</span>
@@ -104,7 +105,7 @@
         <table class="tabel" id="myTableData"  border="1" cellpadding="2";">
             <tr>
                 
-                <td><b>Nama Member</b></td>
+                <td><b>Nama</b></td>
                 <td><b>Pesanan</b></td>
                 <td><b>Harga</b></td>
                 <td><b>Jumlah Pesanan</b></td>

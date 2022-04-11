@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styleLogin.css">
-    <link rel="icon" type="icon" href="../png/logo_jti_icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/styleOrder.css"> -->    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styleLogin.css">
+  <link rel="icon" type="icon" href="../png/logo_jti_icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/styleOrder.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Login</title>
 </head>
+
 <body class="body-Login">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-    <div class="login">
+  <div class="login">
 
-        <div class="namaakun">
-            <p>Teras Biru Polinema</p>
-        </div>
-        
-        <br>
-            <form action="login.php" method="post">
-            <p>Username:<input class="user" type="text" name="username"/></p>
-            <p>Password: <input class="user" type="password" name="pass"/></p><br>
-            <button class="btn-login">Submit</button><br><br>
-            </form>
-            
-        
-           
-            <p align="center">Lupa kata sandi?</p>
-        
+    <div class="namaakun">
+      <p>Rawon Nguling</p>
     </div>
-    
+
+    <br>
+    <form action="" method="post">
+      <p>Username:<input class="user" type="text" name="username" id="username" /></p>
+      <p>Password: <input class="user" type="password" name="pass" id="password" /></p><br>
+      <a type="button" class="btn-login" onclick="login()" >submit</a>
+
+      
+    </form><br>
 
 
-    <br><br>
-    <div class="daftar-login">
-        <p>Tidak punya akun? <a class="link" href="daftar.html">Daftar</a></p>
-    </div>
+
+    <p align="center">Lupa kata sandi?</p>
+
+  </div>
+
+
+
+  <br><br>
+  <div class="daftar-login">
+    <p>Tidak punya akun? <a class="link" href="daftar.html">Daftar</a></p>
+  </div>
 </body>
+
 </html>

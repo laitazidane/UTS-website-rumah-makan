@@ -99,38 +99,65 @@ function pesan(){
 }
   
 function tampilPesan(){
-  swal("Pesanan Berhasil!", "pesanan anda sekarang telah diproses", {
-    icon: "success",
-  }).then((value) => {
-    window.location.href = "#detail-pesanan"
-  });;
 
-    var nama = document.getElementById("nama");
-    var pesanan = document.getElementById("pesanan");
-    var harga = document.getElementById("harga");
-    var jml = document.getElementById("jmlPesanan");
-    var tgl = document.getElementById("tgl");
-    var telp = document.getElementById("telp");
-    var alamat = document.getElementById("alamat");
-    var pesan = document.getElementById("message");
-    var table = document.getElementById("myTableData");
-    var totalharga = parseInt(document.getElementById("harga").value) * parseInt(document.getElementById("jmlPesanan").value);
-   
-    
+  var nama = document.getElementById("nama").value;
+  var pesanan = document.getElementById("pesanan").value;
+  var harga = document.getElementById("harga").value;
+  var jml = document.getElementById("jmlPesanan").value;
+  var tgl = document.getElementById("tgl").value;
+  var telp = document.getElementById("telp").value;
+  var alamat = document.getElementById("alamat").value;
+  var pesan = document.getElementById("message").value;
+  var table = document.getElementById("myTableData");
+  var totalharga = parseInt(document.getElementById("harga").value) * parseInt(document.getElementById("jmlPesanan").value);
+  
  
+if(nama == "zidan" || nama == "dito"){
+  
+  if(jml > 3){
+    hargaDiskon = totalharga-(totalharga*10/100);
+    
+  }else if(jml >= 2){
+    hargaDiskon = totalharga-(totalharga*7/100);
+    
+   
+  }else{
+    hargaDiskon = totalharga-(totalharga*5/100);
+    
+  }
+  
+}else{  
+  if(jml >= 3){
+    hargaDiskon = totalharga-(totalharga*5/100);
+    
+  }else{
+    hargaDiskon = totalharga;
+  }
+ 
+}
+ 
+var hargaDiskon;
+ 
+    swal("Pesanan Berhasil!", "pesanan anda sekarang telah diproses", {
+      icon: "success",
+    }).then((value) => {
+      window.location.href = "#detail-pesanan"
+    });;
+
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
     
-    row.insertCell(0).innerHTML= nama.value;
-    row.insertCell(1).innerHTML= pesanan.value;
-    row.insertCell(2).innerHTML= harga.value;
-    row.insertCell(3).innerHTML= jml.value;
-    row.insertCell(4).innerHTML= totalharga;
-    row.insertCell(5).innerHTML= tgl.value;
-    row.insertCell(6).innerHTML= telp.value;
-    row.insertCell(7).innerHTML= alamat.value;
-    row.insertCell(8).innerHTML= pesan.value;
+    row.insertCell(0).innerHTML= nama;
+    row.insertCell(1).innerHTML= pesanan;
+    row.insertCell(2).innerHTML= harga;
+    row.insertCell(3).innerHTML= jml;
+    row.insertCell(4).innerHTML= hargaDiskon;
+    row.insertCell(5).innerHTML= tgl;
+    row.insertCell(6).innerHTML= telp;
+    row.insertCell(7).innerHTML= alamat;
+    row.insertCell(8).innerHTML= pesan;
     row.insertCell(9).innerHTML=  '<input type="button" id="delete" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    
     
 }
 function deleteRow(obj) {
@@ -138,5 +165,25 @@ function deleteRow(obj) {
   var index = obj.parentNode.parentNode.rowIndex;
   var table = document.getElementById("myTableData");
   table.deleteRow(index);
+  
+}
+
+function login(){
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+
+  if (user == "laita zidan" && pass == "12345678"){   
+        swal("Login Berhasil!", "Selamat Datang di Official Website Rawon Nguling", {
+      icon: "success",
+    }).then((value) => {
+      window.location.href = "landingPage.html"
+    });;
+    }else{
+        
+        swal("Login Gagal!", "username dan password anda salah, silahkan coba lagi!", {
+            icon: "error", }).then((value) => {
+                  window.history.back();       
+              });;
+    }
   
 }
